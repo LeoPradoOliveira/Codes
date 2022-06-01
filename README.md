@@ -1,1 +1,0 @@
-Bibliotecas e códigos
