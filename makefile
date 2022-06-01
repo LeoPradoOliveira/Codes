@@ -1,15 +1,8 @@
-TARGET = listas
+PROJETO: main.o leo.o
+	gcc main.o leo.o -o PROJETO
 
-all:
-	make compilar
-	make run
-	make clean
+main.o: main.c
+	gcc -c main.c
 
-compilar: main.c leo.c leo.h
-	gcc -o $(TARGET) main.c leo.c leo.h
-
-run:
-	./$(TARGET)
-
-clean:
-	$(RM) $(TARGET)
+leo.o: leo.c leo.h
+	gcc -c leo.c
