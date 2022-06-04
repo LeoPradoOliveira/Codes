@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/workspace/Codes'
+make: Leaving directory '/workspace/Codes'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
