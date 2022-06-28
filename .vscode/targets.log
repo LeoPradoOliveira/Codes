@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun  4 16:17:01 2022
+# Make data base, printed on Mon Jun 27 23:57:48 2022
 
 # Variables
 
@@ -33,7 +33,7 @@ rvm_path = /home/gitpod/.rvm
 # environment
 SUPERVISOR_ADDR = localhost:22999
 # environment
-SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/2e0ee477-4e61-4014-8151-8d83d366ead1
+SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/1ff37358-394b-4019-bbc5-d39772ef61a0
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -89,7 +89,7 @@ CARGO_HOME = /workspace/.cargo
 # environment
 rvm_stored_umask = 0022
 # environment
-GITPOD_WORKSPACE_CLUSTER_HOST = ws-us46.gitpod.io
+GITPOD_WORKSPACE_CLUSTER_HOST = ws-us47.gitpod.io
 # environment
 GITPOD_ANALYTICS_SEGMENT_KEY = bUY8IRdJ42KjLOBS9LoIHMYFBD8rSzjU
 # environment
@@ -105,7 +105,7 @@ SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ecc8e62f-0707-4ef1-a0c5-6a295109657a.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-b93a0ada-e2bd-43b7-80c3-79b792f31ba2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -147,7 +147,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = DU_yIi5_wdCh9eYrCIk8YgFvQoQDvWng
+GITPOD_CLI_APITOKEN = JO.jbnyfIJfkGeVOtj98eA1W68EUE7Xr
 # automatic
 +F = $(notdir $+)
 # environment
@@ -174,7 +174,6 @@ IRBRC = /home/gitpod/.rvm/rubies/ruby-2.7.6/.irbrc
 SHLVL = 0
 # environment
 NIX_PROFILES = /nix/var/nix/profiles/default /home/gitpod/.nix-profile
- 
 # environment
 GITPOD_GIT_USER_NAME = LeoPradoOliveira
 # environment
@@ -276,9 +275,9 @@ NGINX_DOCROOT_IN_REPO = public
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = 65c63f84-be0d-4240-980d-8bb9388ff331
+GITPOD_INSTANCE_ID = d20da342-b56b-4110-b341-cad7add972a8
 # environment
-GITPOD_WORKSPACE_URL = https://leopradooliveira-codes-3l7gifq1dak.ws-us46.gitpod.io
+GITPOD_WORKSPACE_URL = https://leopradooliveira-codes-3l7gifq1dak.ws-us47.gitpod.io
 # default
 .RECIPEPREFIX := 
 # environment
@@ -298,9 +297,9 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.6
 
 # Directories
 
-# . (device 2346, inode 469822170): 8 files, no impossibilities.
+# . (device 2346, inode 1076339816): 10 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -350,12 +349,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 137 B / avg = 8 B
-# current buf: size = 8162 B / used = 137 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 166 B / avg = 9 B
+# current buf: size = 8162 B / used = 166 B / count = 18 / avg = 9 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 21 / hit rate = 14%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Sat Jun  4 16:17:01 2022
+# Load=18/8192=0%, Rehash=0, Collisions=1/21=5%
+# Finished Make data base on Mon Jun 27 23:57:48 2022
 
  
