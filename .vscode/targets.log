@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun 29 16:44:25 2022
+# Make data base, printed on Thu Jun 30 03:46:45 2022
 
 # Variables
 
@@ -33,7 +33,7 @@ rvm_path = /home/gitpod/.rvm
 # environment
 SUPERVISOR_ADDR = localhost:22999
 # environment
-SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/b5aedd27-3c50-436b-b849-baacd21edd4f
+SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/efbb8055-ca04-4e30-9c0c-2bd4df0b87b0
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -105,7 +105,7 @@ SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-6b6ddb61-cbef-4762-aa11-9e6673e65416.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-10a74377-bc4d-4854-aa49-03d2053a7b9e.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -147,7 +147,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = yE9phtSLNiYuNvKh01nhaDiIiuFqD_F.
+GITPOD_CLI_APITOKEN = p3e69UeAaZgN9Xmt42HtP8ut_-I0N-Uc
 # automatic
 +F = $(notdir $+)
 # environment
@@ -275,7 +275,7 @@ NGINX_DOCROOT_IN_REPO = public
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = ec2356d2-cdcd-4fd9-8aa4-26122f4e207d
+GITPOD_INSTANCE_ID = a96f688a-9380-4443-afab-c95095c2f102
 # environment
 GITPOD_WORKSPACE_URL = https://leopradooliveira-codes-3l7gifq1dak.ws-us47.gitpod.io
 # default
@@ -297,7 +297,7 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.6
 
 # Directories
 
-# . (device 2346, inode 1751527728): 10 files, no impossibilities.
+# . (device 2346, inode 671621545): 10 files, no impossibilities.
 
 # 10 files, no impossibilities in 1 directories.
 
@@ -355,6 +355,6 @@ GNUmakefile:
 # strcache performance: lookups = 21 / hit rate = 14%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=1/21=5%
-# Finished Make data base on Wed Jun 29 16:44:25 2022
+# Finished Make data base on Thu Jun 30 03:46:45 2022
 
  
