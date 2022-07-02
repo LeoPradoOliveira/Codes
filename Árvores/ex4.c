@@ -2,10 +2,10 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 struct arv{
 	char info;
     int count;
-    int max;
 	struct arv *esq;
 	struct arv *dir;
 };
@@ -123,8 +123,19 @@ int galho_de_dois_no(Arv* a){
 caso sejam colocados caracteres iguais, eles serão acumulados em um nó só, fazendo com que a 
 contagem de nós e folhas se altere em relação ao outro exercício.*/
 
+//Imprime repetindo os caracteres acumulados nos nós
+void imprime_simetrica_repeticao(Arv* a){
+    int i;
+    if(a!=NULL){
+        imprime_simetrica_repeticao(a->esq);
+        for(i=0;i<a->count;i++){
+            printf("%c ",a->info);
+        }
+        imprime_simetrica_repeticao(a->dir);
+    }
+}
+
 Arv* arv_insere_acumulado(Arv* a,char b){
-    int maior = 0;
     if(a==NULL){
         a = (Arv*) malloc (sizeof(Arv));
         a->info = b;
@@ -138,10 +149,6 @@ Arv* arv_insere_acumulado(Arv* a,char b){
     else{
         a->count++;
     }
-    if(a->count>maior){
-        maior = a->count;
-    }
-    a->max = maior;
     return a;
 }
 
@@ -151,7 +158,7 @@ void mysuperhistogramH(Arv* a, int max){
 		mysuperhistogramH(a->esq, max);
         printf(" |%c ",a->info);
         for(i=0;i<a->count;i++){
-		printf("%c", 254);
+		printf("■");
         }
         for(i=0;i<max-a->count;i++){
             printf(" ");
@@ -162,53 +169,58 @@ void mysuperhistogramH(Arv* a, int max){
 }
 
 void mysuperhistogramV(Arv* a, int max){
-    int i = max;
     
     if(!arv_vazia(a)){      
-		mysuperhistogramV(a->esq, i);
+		mysuperhistogramV(a->esq, max);
 
-        if(a->count==i){
+        if(a->count==max){
             printf("%d ", a->count);
         }
-        if(a->count>i){
-            printf("%c ", 219);
+        if(a->count>max){
+            printf("█ ");
         }
-        if(a->count<i)
+        if(a->count<max)
             printf("  ");
 
-		mysuperhistogramV(a->dir, i);
+		mysuperhistogramV(a->dir, max);
 	}
+}
+
+int arv_max_count(Arv* a, int max){
+    if(arv_vazia(a)){
+        return max;
+    }
+    max = arv_max_count(a->esq,max);
+    max = arv_max_count(a->dir,max);
+
+    if(max<a->count){
+        max = a->count;
+    }
+    return max;
 }
 
 int main(int argc, char ** argv){
     Arv* limoeiro;
-    int i;
+    int i, max;
+    char t;
     limoeiro = arv_criavazia();
 
-    limoeiro = arv_insere_acumulado(limoeiro, 't');
-    limoeiro = arv_insere_acumulado(limoeiro, 't');
-    limoeiro = arv_insere_acumulado(limoeiro, 'u');
-    limoeiro = arv_insere_acumulado(limoeiro, '?');
-    limoeiro = arv_insere_acumulado(limoeiro, ')');
-    limoeiro = arv_insere_acumulado(limoeiro, 'a');
-    limoeiro = arv_insere_acumulado(limoeiro, '?');
-    limoeiro = arv_insere_acumulado(limoeiro, 'y');
-    limoeiro = arv_insere_acumulado(limoeiro, 'r');
-    limoeiro = arv_insere_acumulado(limoeiro, 'u');
-    limoeiro = arv_insere_acumulado(limoeiro, '8');
-    limoeiro = arv_insere_acumulado(limoeiro, '?');
-    limoeiro = arv_insere_acumulado(limoeiro, 'z');
-    limoeiro = arv_insere_acumulado(limoeiro, 'a');
-    limoeiro = arv_insere_acumulado(limoeiro, 't');
-    limoeiro = arv_insere_acumulado(limoeiro, 'z');
+    srand(time(NULL));
 
-    printf("\nHistograma Horizontal:\n\n");
-    mysuperhistogramH(limoeiro, limoeiro->max);
+    for(i=0;i<100;i++){
+        t = rand() % 93 + 33;
+        limoeiro = arv_insere_acumulado(limoeiro, t);
+    }
+
+    max = arv_max_count(limoeiro, 0);
+
+    printf("\nHistograma Horizontal:\n");
+    mysuperhistogramH(limoeiro, max);
     printf("\nHistograma Vertical:\n\n");
 
     //Gambiarra pra melhorar a formatação
-    for(i=0;i<=limoeiro->max;i++){
-        mysuperhistogramV(limoeiro, limoeiro->max-i);
+    for(i=0;i<=max;i++){
+        mysuperhistogramV(limoeiro, max-i);
         printf("\n");
     }
     arv_imprime_simetrica(limoeiro);
