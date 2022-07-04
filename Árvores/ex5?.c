@@ -149,7 +149,7 @@ int arv_conta_no(Arv *a){
 void arv_imprime_count(Arv* a){
 	if(!arv_vazia(a)){
 		arv_imprime_count(a->esq);
-		printf("%c = [%d]\t ",a->info,a->count);
+		printf("%c = [%.3d]\t ",a->info,a->count);
 		arv_imprime_count(a->dir);
 	}
 }
@@ -240,7 +240,7 @@ int main(int argc, char ** argv){
 
     srand(time(NULL));
 
-    for(i=0;i<10000;i++){
+    for(i=0;i<5000;i++){
         t = rand() % 93 + 33;
         limoeiro = arv_insere_acumulado(limoeiro, t);
     }
