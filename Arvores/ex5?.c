@@ -240,7 +240,7 @@ int main(int argc, char ** argv){
 
     srand(time(NULL));
 
-    for(i=0;i<4000;i++){
+    for(i=0;i<400;i++){
         t = rand() % 93 + 33;
         limoeiro = arv_insere_acumulado(limoeiro, t);
     }
